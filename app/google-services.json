@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "977264080532",
+    "project_id": "artsell-2922d",
+    "storage_bucket": "artsell-2922d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977264080532:android:152cf368cbcb4c7b186681",
+        "android_client_info": {
+          "package_name": "com.example.artsell"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977264080532-i4g13lqcbkuca9huv4r4mvv9gbgttesd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClix6V50Z3Es7mNGIPqdRAWKCtJQms6X8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977264080532-i4g13lqcbkuca9huv4r4mvv9gbgttesd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
