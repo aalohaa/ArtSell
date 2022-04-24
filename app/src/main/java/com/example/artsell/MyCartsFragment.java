@@ -15,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.artsell.adapters.MyCartAdapter;
@@ -37,6 +39,9 @@ public class MyCartsFragment extends Fragment {
     RecyclerView recyclerView;
     MyCartAdapter cartAdapter;
     List<MyCartModel> cartModelList;
+    Button buyNow;
+    int totalBill;
+    ProgressBar progressBar;
 
     public MyCartsFragment() {
         // Required empty public constructor
@@ -50,13 +55,20 @@ public class MyCartsFragment extends Fragment {
 
         db = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
-        recyclerView = root.findViewById(R.id.recyclerview);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+
+        progressBar = root.findViewById(R.id.progressbar);
+        progressBar.setVisibility(View.VISIBLE);
+        LocalBroadcastManager.getInstance(getActivity())
+                .registerReceiver(mMessageReceiver, new IntentFilter("MyTotalAmount"));
 
         overTotalAmount = root.findViewById(R.id.textView6);
 
-        LocalBroadcastManager.getInstance(getActivity())
-                .registerReceiver(mMessageReceiver, new IntentFilter("MyTotalAmount"));
+        recyclerView = root.findViewById(R.id.recyclerview);
+        recyclerView.setVisibility(View.GONE);
+        buyNow = root.findViewById(R.id.buy_now);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
 
         cartModelList = new ArrayList<>();
         cartAdapter = new MyCartAdapter(getActivity(), cartModelList);
@@ -71,6 +83,8 @@ public class MyCartsFragment extends Fragment {
                         MyCartModel cartModel = documentSnapshot.toObject(MyCartModel.class);
                         cartModelList.add(cartModel);
                         cartAdapter.notifyDataSetChanged();
+                        progressBar.setVisibility(View.GONE);
+                        recyclerView.setVisibility(View.VISIBLE);
                     }
                 }
             }
@@ -84,7 +98,7 @@ public class MyCartsFragment extends Fragment {
         @Override
         public void onReceive(Context context, Intent intent) {
 
-            int totalBill = intent.getIntExtra("totalAmount", 0);
+            totalBill = intent.getIntExtra("totalAmount", 0);
             overTotalAmount.setText("Total Bill: " + totalBill + "$");
 
         }
