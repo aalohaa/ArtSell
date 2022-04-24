@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.artsell.activities.HomeActivity;
 import com.example.artsell.models.UserModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -27,8 +28,15 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import org.w3c.dom.Text;
+
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    FirebaseDatabase database;
+    FirebaseAuth auth;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -38,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
 
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -52,6 +63,28 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        View headerView = navigationView.getHeaderView(0);
+        TextView headerName = headerView.findViewById(R.id.nav_header_name);
+        TextView headerEmail = headerView.findViewById(R.id.nav_header_email);
+        CircleImageView headerImg = headerView.findViewById(R.id.nav_header_img);
+
+        database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        UserModel userModel = snapshot.getValue(UserModel.class);
+
+                        headerName.setText(userModel.getName());
+                        headerEmail.setText(userModel.getEmail());
+                        Glide.with(MainActivity.this).load(userModel.getProfileImg()).into(headerImg);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
     }
 
     @Override
