@@ -36,7 +36,7 @@ public class ViewAllAdapter extends RecyclerView.Adapter<ViewAllAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.imageView);
         holder.name.setText(list.get(position).getName());
         holder.description.setText(list.get(position).getDescription());

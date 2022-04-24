@@ -64,21 +64,21 @@ public class ViewAllActivity extends AppCompatActivity {
                 }
             });
         }
-            // Getting vegetable
-            if (type != null && type.equalsIgnoreCase("vegetable")) {
-                firestore.collection("AllProducts").whereEqualTo("type", "vegetable").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+        // Getting vegetable
+        if (type != null && type.equalsIgnoreCase("vegetable")) {
+            firestore.collection("AllProducts").whereEqualTo("type", "vegetable").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
 
-                        for (DocumentSnapshot documentSnapshot :task.getResult().getDocuments()) {
-                            ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
-                            viewAllModelList.add(viewAllModel);
-                            viewAllAdapter.notifyDataSetChanged();
-                        }
+                    for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
+                        ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
+                        viewAllModelList.add(viewAllModel);
+                        viewAllAdapter.notifyDataSetChanged();
                     }
-                });
-            }
+                }
+            });
+        }
         // Getting fish
         if (type != null && type.equalsIgnoreCase("fish")) {
             firestore.collection("AllProducts").whereEqualTo("type", "fish").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -86,35 +86,37 @@ public class ViewAllActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
 
-                    for (DocumentSnapshot documentSnapshot :task.getResult().getDocuments()) {
+                    for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
                         ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
                         viewAllModelList.add(viewAllModel);
                         viewAllAdapter.notifyDataSetChanged();
                     }
                 }
             });
-        } // Getting egg
+        }
+        // Getting egg
         if (type != null && type.equalsIgnoreCase("egg")) {
             firestore.collection("AllProducts").whereEqualTo("type", "egg").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
 
-                    for (DocumentSnapshot documentSnapshot :task.getResult().getDocuments()) {
+                    for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
                         ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
                         viewAllModelList.add(viewAllModel);
                         viewAllAdapter.notifyDataSetChanged();
                     }
                 }
             });
-        }// Getting milk
+        }
+        // Getting milk
         if (type != null && type.equalsIgnoreCase("milk")) {
             firestore.collection("AllProducts").whereEqualTo("type", "milk").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
 
-                    for (DocumentSnapshot documentSnapshot :task.getResult().getDocuments()) {
+                    for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
                         ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
                         viewAllModelList.add(viewAllModel);
                         viewAllAdapter.notifyDataSetChanged();
@@ -122,7 +124,5 @@ public class ViewAllActivity extends AppCompatActivity {
                 }
             });
         }
-
-
-        }
     }
+}

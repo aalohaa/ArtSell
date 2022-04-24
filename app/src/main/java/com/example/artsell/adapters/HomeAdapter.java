@@ -37,7 +37,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         Glide.with(context).load(categoryList.get(position).getImg_url()).into(holder.catImg);
         holder.name.setText(categoryList.get(position).getName());
