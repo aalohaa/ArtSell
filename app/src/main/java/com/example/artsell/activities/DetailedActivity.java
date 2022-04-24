@@ -146,7 +146,6 @@ public class DetailedActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<DocumentReference> task) {
                 Toast.makeText(DetailedActivity.this, "Added To A Cart", Toast.LENGTH_SHORT).show();
                 finish();
-
             }
         });
     }
