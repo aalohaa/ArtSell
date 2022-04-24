@@ -74,12 +74,12 @@ public class DetailedActivity extends AppCompatActivity {
 
             totalPrice = viewAllModel.getPrice() * totalQuantity;
 
-            if(viewAllModel.getType().equals("egg")){
+            if (viewAllModel.getType().equals("egg")) {
                 price.setText("Price: $" + viewAllModel.getPrice() + "/dozen");
                 totalPrice = viewAllModel.getPrice() * totalQuantity;
             }
 
-            if(viewAllModel.getType().equals("milk")){
+            if (viewAllModel.getType().equals("milk")) {
                 price.setText("Price: $" + viewAllModel.getPrice() + "/litre");
                 totalPrice = viewAllModel.getPrice() * totalQuantity;
             }
@@ -98,7 +98,7 @@ public class DetailedActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(totalQuantity < 10){
+                if (totalQuantity < 10) {
                     totalQuantity++;
                     quantity.setText(String.valueOf(totalQuantity));
                     totalPrice = viewAllModel.getPrice() * totalQuantity;
@@ -110,7 +110,7 @@ public class DetailedActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(totalQuantity > 1){
+                if (totalQuantity > 1) {
                     totalQuantity--;
                     quantity.setText(String.valueOf(totalQuantity));
                     totalPrice = viewAllModel.getPrice() * totalQuantity;
@@ -131,7 +131,7 @@ public class DetailedActivity extends AppCompatActivity {
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
         saveCurrentTime = currentTime.format(calForDate.getTime());
 
-        final HashMap<String,Object> cartMap = new HashMap<>();
+        final HashMap<String, Object> cartMap = new HashMap<>();
 
         cartMap.put("productName", viewAllModel.getName());
         cartMap.put("productPrice", price.getText().toString());
@@ -140,12 +140,13 @@ public class DetailedActivity extends AppCompatActivity {
         cartMap.put("totalQuantity", quantity.getText().toString());
         cartMap.put("totalPrice", totalPrice);
 
-        firestore.collection("CurrentUser").document(auth.getCurrentUser().getUid())
-                .collection("AddToCart").add(cartMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+        firestore.collection("AddToCart").document(auth.getCurrentUser().getUid())
+                .collection("CurrentUser").add(cartMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override
             public void onComplete(@NonNull Task<DocumentReference> task) {
-                Toast.makeText(DetailedActivity.this, "Added to a cart", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DetailedActivity.this, "Added To A Cart", Toast.LENGTH_SHORT).show();
                 finish();
+
             }
         });
     }

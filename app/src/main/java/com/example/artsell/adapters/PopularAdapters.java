@@ -36,7 +36,7 @@ public class PopularAdapters extends RecyclerView.Adapter<PopularAdapters.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Glide.with(context).load(popularModelList.get(position).getImg_url()).into(holder.popImg);
         holder.name.setText(popularModelList.get(position).getName());

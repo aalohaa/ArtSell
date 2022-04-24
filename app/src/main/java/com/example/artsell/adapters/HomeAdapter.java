@@ -37,14 +37,14 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Glide.with(context).load(categoryList.get(position).getImg_url()).into(holder.catImg);
         holder.name.setText(categoryList.get(position).getName());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Intent intent = new Intent(context, ViewAllActivity.class);
                 intent.putExtra("type", categoryList.get(position).getType());
                 context.startActivity(intent);

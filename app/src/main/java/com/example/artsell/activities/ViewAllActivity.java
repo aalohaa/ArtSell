@@ -45,7 +45,7 @@ public class ViewAllActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressbar);
         progressBar.setVisibility(View.VISIBLE);
 
-                firestore = FirebaseFirestore.getInstance();
+        firestore = FirebaseFirestore.getInstance();
         String type = getIntent().getStringExtra("type");
         recyclerView = findViewById(R.id.view_all_rec);
         recyclerView.setVisibility(View.GONE);

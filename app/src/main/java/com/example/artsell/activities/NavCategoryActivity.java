@@ -58,7 +58,6 @@ public class NavCategoryActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
-
                     for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
                         NavCategoryDetailedModel viewAllModel = documentSnapshot.toObject(NavCategoryDetailedModel.class);
                         list.add(viewAllModel);
@@ -66,7 +65,6 @@ public class NavCategoryActivity extends AppCompatActivity {
                         progressBar.setVisibility(View.GONE);
                         recyclerView.setVisibility(View.VISIBLE);
                     }
-
                 }
             });
         }

@@ -1,5 +1,6 @@
 package com.example.artsell.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -37,7 +38,7 @@ public class NavCategoryAdapter extends RecyclerView.Adapter<NavCategoryAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.imageView);
         holder.name.setText(list.get(position).getName());
@@ -46,7 +47,7 @@ public class NavCategoryAdapter extends RecyclerView.Adapter<NavCategoryAdapter.
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Intent intent = new Intent(context, NavCategoryActivity.class);
                 intent.putExtra("type", list.get(position).getType());
                 context.startActivity(intent);

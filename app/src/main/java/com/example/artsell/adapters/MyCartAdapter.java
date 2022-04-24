@@ -1,5 +1,6 @@
 package com.example.artsell.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -46,7 +47,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         holder.name.setText(cartModelList.get(position).getProductName());
         holder.price.setText(cartModelList.get(position).getProductPrice());
@@ -57,7 +58,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
 
         holder.deleteItem.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 firestore.collection("CurrentUser").document(auth.getCurrentUser().getUid())
                         .collection("AddToCart")
                         .document(cartModelList.get(position).getDocumentId())
