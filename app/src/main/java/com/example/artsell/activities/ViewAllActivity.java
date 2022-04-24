@@ -55,7 +55,7 @@ public class ViewAllActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
 
-                    for (DocumentSnapshot documentSnapshot:task.getResult().getDocuments()) {
+                    for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
                         ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
                         viewAllModelList.add(viewAllModel);
                         viewAllAdapter.notifyDataSetChanged();
@@ -64,7 +64,6 @@ public class ViewAllActivity extends AppCompatActivity {
                 }
             });
         }
-
             // Getting vegetable
             if (type != null && type.equalsIgnoreCase("vegetable")) {
                 firestore.collection("AllProducts").whereEqualTo("type", "vegetable").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {

@@ -1,5 +1,6 @@
 package com.example.artsell.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -35,7 +36,7 @@ public class PopularAdapters extends RecyclerView.Adapter<PopularAdapters.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Glide.with(context).load(popularModelList.get(position).getImg_url()).into(holder.popImg);
         holder.name.setText(popularModelList.get(position).getName());
@@ -45,7 +46,7 @@ public class PopularAdapters extends RecyclerView.Adapter<PopularAdapters.ViewHo
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Intent intent = new Intent(context, ViewAllActivity.class);
                 intent.putExtra("type", popularModelList.get(position).getType());
                 context.startActivity(intent);

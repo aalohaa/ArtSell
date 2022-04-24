@@ -25,14 +25,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:fontFamily="@font/alice"
                 android:id="@+id/view_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
                 android:ellipsize="end"
+                android:fontFamily="@font/alice"
                 android:maxLines="1"
                 android:singleLine="true"
+                android:text="Name"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -92,13 +92,15 @@
 
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                 android:layout_gravity="end"
-                android:layout_marginRight="5dp"
-                android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp" />
 
         </LinearLayout>
+
 
     </LinearLayout>
 
