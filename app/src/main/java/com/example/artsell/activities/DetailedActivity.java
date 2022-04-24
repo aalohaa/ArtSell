@@ -131,7 +131,7 @@ public class DetailedActivity extends AppCompatActivity {
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
         saveCurrentTime = currentTime.format(calForDate.getTime());
 
-        final HashMap<String, Object> cartMap = new HashMap<>();
+        final HashMap<String,Object> cartMap = new HashMap<>();
 
         cartMap.put("productName", viewAllModel.getName());
         cartMap.put("productPrice", price.getText().toString());
@@ -144,9 +144,11 @@ public class DetailedActivity extends AppCompatActivity {
                 .collection("AddToCart").add(cartMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override
             public void onComplete(@NonNull Task<DocumentReference> task) {
-                Toast.makeText(DetailedActivity.this, "Added To A Cart", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DetailedActivity.this, "Added to a cart", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
     }
 }
+
+
