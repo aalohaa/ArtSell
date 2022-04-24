@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ArtSell">
         <activity
+            android:name=".activities.NavCategoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.DetailedActivity"
             android:exported="false" />
         <activity

@@ -79,6 +79,7 @@ public class HomeFragment extends Fragment {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
+
                                 PopularModel popularModel = document.toObject((PopularModel.class));
                                 popularModelList.add(popularModel);
                                 popularAdapters.notifyDataSetChanged();

@@ -53,7 +53,7 @@ public class CategoryFragment extends Fragment {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
 
-                                NavCategoryModel navCategoryModel = document.toObject((NavCategoryModel.class));
+                                NavCategoryModel navCategoryModel = document.toObject(NavCategoryModel.class);
                                 categoryModelList.add(navCategoryModel);
                                 navCategoryAdapter.notifyDataSetChanged();
                             }
