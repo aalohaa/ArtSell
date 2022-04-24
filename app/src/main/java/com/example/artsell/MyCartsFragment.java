@@ -82,7 +82,13 @@ public class MyCartsFragment extends Fragment {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if(task.isSuccessful()){
                     for(DocumentSnapshot documentSnapshot : task.getResult().getDocuments()){
+
+                        String documentId = documentSnapshot.getId();
+
                         MyCartModel cartModel = documentSnapshot.toObject(MyCartModel.class);
+
+                        cartModel.setDocumentId(documentId);
+
                         cartModelList.add(cartModel);
                         cartAdapter.notifyDataSetChanged();
                         progressBar.setVisibility(View.GONE);
