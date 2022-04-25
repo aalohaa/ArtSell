@@ -61,7 +61,7 @@ public class ProfileFragment extends Fragment {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         UserModel userModel = snapshot.getValue(UserModel.class);
 
-                        Glide.with(getContext()).load(userModel.getProfileImg()).into(profileImg);
+//                        Glide.with(getContext()).load(userModel.getProfileImg()).into(profileImg);
                     }
 
                     @Override

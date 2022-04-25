@@ -37,12 +37,22 @@
         <entry key="..\:/Users/khusa/Desktop/ArtSell/app/src/main/res/layout/view_all_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/khusa/Desktop/ArtSell/app/src/main/res/menu/activity_main_drawer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/khusa/Desktop/ArtSell/app/src/main/res/menu/main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/account.xml" value="0.272" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/arrow.xml" value="0.292" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/autorenew.xml" value="0.292" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/border.xml" value="0.1" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/edittext_background.xml" value="0.292" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/edittext_bg.xml" value="0.292" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/fab_add_custom.xml" value="0.292" />
+        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.272" />
+        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/ic_baseline_category_24.xml" value="0.272" />
+        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.272" />
+        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/ic_baseline_local_offer_24.xml" value="0.272" />
+        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/ic_baseline_local_phone_24.xml" value="0.272" />
+        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.272" />
+        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.272" />
+        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.272" />
+        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.272" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/ic_chat.xml" value="0.259" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/ic_home.xml" value="0.292" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/drawable/ic_login.xml" value="0.292" />
@@ -55,12 +65,13 @@
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/activity_nav_category.xml" value="0.2947916666666667" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/activity_placed_order.xml" value="0.2947916666666667" />
+        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/activity_registration.xml" value="0.23641304347826086" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/content_main.xml" value="0.2947916666666667" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/fragment_category.xml" value="0.2947916666666667" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/fragment_chat.xml" value="0.1" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/fragment_home.xml" value="0.2947916666666667" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/fragment_my_carts.xml" value="0.14719202898550723" />
-        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/my_cart_item.xml" value="0.2947916666666667" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/nav_cat_item.xml" value="0.2947916666666667" />
         <entry key="..\:/Users/talga/StudioProjects/ArtSellSync/app/src/main/res/layout/nav_header_main.xml" value="0.2791666666666667" />
