@@ -10,6 +10,6 @@ public class WPage1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wpage1);
+//        setContentView(R.layout.activity_wpage1);
     }
 }
