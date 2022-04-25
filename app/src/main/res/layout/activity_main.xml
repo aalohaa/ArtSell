@@ -115,6 +115,14 @@
             app:fab_label="My Carts"
             app:fab_size="mini"
             android:src="@drawable/mycart"/>
-
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/show_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="#696969"
+            app:fab_label="Log In"
+            app:fab_size="mini"
+            android:src="@drawable/ic_login"/>
     </com.github.clans.fab.FloatingActionMenu>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.artsell.activities.HomeActivity;
+import com.example.artsell.activities.LoginActivity;
 import com.example.artsell.databinding.ActivityMainBinding;
 import com.example.artsell.models.UserModel;
 import com.example.artsell.ui.category.CategoryFragment;
@@ -52,9 +53,13 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     BottomNavigationView navigationView;
     FloatingActionMenu fabMenu;
-    com.github.clans.fab.FloatingActionButton fabProfile, fabCategory, fabOffers, fabNewProducts,fabMyCarts;
+    com.github.clans.fab.FloatingActionButton fabProfile, fabCategory, fabOffers, fabNewProducts,fabMyCarts, fabShowLogin;
     FloatingActionButton fabSearch;
 
+//    View headerView = navigationView.getHeaderView(0);
+//    TextView headerName = headerView.findViewById(R.id.nav_header_name);
+//    TextView headerEmail = headerView.findViewById(R.id.nav_header_email);
+//    CircleImageView headerImg = headerView.findViewById(R.id.nav_header_img);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         fabOffers = findViewById(R.id.nav_offers);
         fabNewProducts = findViewById(R.id.nav_new_products);
         fabMyCarts = findViewById(R.id.nav_my_carts);
+        fabShowLogin = findViewById(R.id.show_login);
 
         fabProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,10 +112,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View View) {
                 replaceFragment(new MyCartsFragment());
+
                 fabMenu.close( true );
             }
         });
-
+        fabShowLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View View) {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                fabMenu.close( true );
+            }
+        });
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.nav_home:
@@ -132,11 +145,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-//        View headerView = navigationView.getHeaderView(0);
-//        TextView headerName = headerView.findViewById(R.id.nav_header_name);
-//        TextView headerEmail = headerView.findViewById(R.id.nav_header_email);
-//        CircleImageView headerImg = headerView.findViewById(R.id.nav_header_img);
-//
+
+
 //        database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
 //                .addListenerForSingleValueEvent(new ValueEventListener() {
 //                    @Override

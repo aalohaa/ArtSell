@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.LoginActivity"
-    android:background="@color/white">
+    android:background="#F0F0F0">
 
     <ImageView
         android:id="@+id/reg_img"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@mipmap/loginbg"
+        android:layout_height="108dp"
+        app:srcCompat="@drawable/ic_logo"
+        app:tint="@color/black"
+        app:tintMode="multiply"
+        android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,87 +23,98 @@
         android:id="@+id/email_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:background="@drawable/edittext_background"
-        android:drawableLeft="@drawable/account"
+        android:gravity="center"
         android:drawablePadding="13dp"
         android:elevation="3dp"
         android:padding="13dp"
         android:hint="Email"
-        android:textColor="#888887"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reg_img"
-        app:layout_constraintWidth_percent=".8" />
+        app:layout_constraintWidth_percent=".85" />
 
     <EditText
         android:id="@+id/password_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/edittext_background"
-        android:drawableLeft="@drawable/keylog"
+        android:gravity="center"
         android:drawablePadding="10dp"
         android:elevation="3dp"
         android:padding="13dp"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColor="#888887"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_login"
-        app:layout_constraintWidth_percent=".8" />
+        app:layout_constraintWidth_percent=".85" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_btn"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:padding="14dp"
-        android:text="Sign In"
+        android:text="Log In"
         android:textAllCaps="false"
         android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/ic_login_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_login" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Don't Have An Account?"
-        android:textStyle="bold"
+        android:id="@+id/text_forgotpass"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:text="Forgot Password?"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:gravity="left"
+        android:textAlignment="gravity"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_btn"
-        app:layout_constraintVertical_bias=".2"
-        app:layout_constraintHorizontal_bias=".4"/>
+        app:layout_constraintVertical_bias="0.167" />
 
     <TextView
-        android:id="@+id/sign_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign In"
-        android:textColor="@color/purple_700"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        android:id="@+id/text_register"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="right"
+        android:text="Register"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/login_btn"
+        app:layout_constraintVertical_bias="0.167" />
 
     <ProgressBar
         android:id="@+id/progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleX=".5"
+        android:scaleY=".5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias=".1"
-        android:scaleY=".5"
-        android:scaleX=".5"/>
+        app:layout_constraintTop_toBottomOf="@+id/text_forgotpass"
+        app:layout_constraintVertical_bias="0.423" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
