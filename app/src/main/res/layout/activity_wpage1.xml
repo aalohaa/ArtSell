@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".welcome.WPage1"
+    android:background="#000000">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="center"
+        app:srcCompat="@drawable/background_gradient_effect"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-70dp"
+        tools:layout_editor_absoluteY="-51dp" />
+
+    <ImageView
+        android:id="@+id/reg_img"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo_light"
+        app:tintMode="multiply" />
+
+    <ImageView
+        android:id="@+id/welcome_page_1"
+        android:layout_width="fill_parent"
+        android:layout_marginBottom="36dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/points_1"
+        tools:layout_editor_absoluteX="55dp"
+        android:layout_height="50dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="120dp"
+        android:text="Welcome!"
+        android:textColor="@color/simpleWhite"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_img" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:text="To the app that helps you sell your art."
+        android:layout_gravity="left"
+        android:textColor="@color/simpleWhite"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextTo2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:padding="14dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="#F0F0F0"
+        android:background="@drawable/ic_login_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
