@@ -47,10 +47,10 @@ public class SlideViewPagerAdapter extends PagerAdapter {
         TextView title=view.findViewById(R.id.title);
         TextView desc=view.findViewById(R.id.desc);
 
-        ImageView next=view.findViewById(R.id.next);
-        ImageView back=view.findViewById(R.id.back);
+        Button next=view.findViewById(R.id.btnNext);
+        ImageView back=view.findViewById(R.id.btnBack);
 
-        Button btnGetStarted=view.findViewById(R.id.btnGetStarted);
+        Button btnGetStarted=view.findViewById(R.id.btnSkip);
         btnGetStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +76,7 @@ public class SlideViewPagerAdapter extends PagerAdapter {
         switch (position)
         {
             case 0:
-                logo.setImageResource(R.drawable.logo1);
+                logo.setImageResource(R.drawable.artselllogo);
                 ind1.setImageResource(R.drawable.seleted);
                 ind2.setImageResource(R.drawable.unselected);
                 ind3.setImageResource(R.drawable.unselected);
@@ -84,6 +84,7 @@ public class SlideViewPagerAdapter extends PagerAdapter {
 
                 title.setText("Welcome");
                 desc.setText("To the app that helps you to buy art");
+                btnGetStarted.setVisibility(View.VISIBLE);
                 back.setVisibility(View.GONE);
                 next.setVisibility(View.VISIBLE);
                 break;
@@ -96,7 +97,9 @@ public class SlideViewPagerAdapter extends PagerAdapter {
 
                 title.setText("Even");
                 desc.setText("Sell the art made by you!");
-                back.setVisibility(View.VISIBLE);
+                back.setVisibility(View.GONE);
+                btnGetStarted.setVisibility(View.GONE);
+                next.setText("Next");
                 next.setVisibility(View.VISIBLE);
                 break;
             case 2:
@@ -109,7 +112,9 @@ public class SlideViewPagerAdapter extends PagerAdapter {
 
                 title.setText("And");
                 desc.setText("Find an artist that can make your wanting art!");
-                back.setVisibility(View.VISIBLE);
+                back.setVisibility(View.GONE);
+                btnGetStarted.setVisibility(View.GONE);
+                next.setText("Next");
                 next.setVisibility(View.VISIBLE);
                 break;
             case 3:
@@ -122,7 +127,9 @@ public class SlideViewPagerAdapter extends PagerAdapter {
 
                 title.setText("Or");
                 desc.setText("Enjoy and get inspired by other creative artists!");
-                back.setVisibility(View.VISIBLE);
+                back.setVisibility(View.GONE);
+                btnGetStarted.setVisibility(View.VISIBLE);
+                btnGetStarted.setText("Start");
                 next.setVisibility(View.GONE);
                 break;
 

@@ -3,40 +3,69 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="center"
+        app:srcCompat="@drawable/background_gradient_effect"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.110000014"
-        app:srcCompat="@drawable/logo1" />
+        app:srcCompat="@drawable/artselllogo"
+        app:tintMode="multiply" />
+
+
+    <TextView
+        android:id="@+id/share_an_in"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/philosopher"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="&quot;Share an inner beauty&quot;"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.71" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome!"
-        android:textColor="@color/colorBlack"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:textColor="@color/simpleWhite"
+        android:fontFamily="@font/lato"
+        android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/desc"
@@ -48,6 +77,8 @@
         android:textSize="22sp"
         android:gravity="left"
         android:text="To the app that helps you sell your art."
+        android:textColor="@color/simpleWhite"
+        android:fontFamily="@font/lato"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
@@ -55,21 +86,35 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnGetStarted"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="120dp"
-        android:layout_marginRight="120dp"
-        android:background="@drawable/ic_login_btn"
-        android:padding="14dp"
-        android:text="Next"
+        android:id="@+id/btnSkip"
+        android:layout_width="166dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/ic_white_empty_btn"
+        android:fontFamily="@font/lato"
+        android:text="Skip"
+        android:textSize="20sp"
         android:textAllCaps="false"
-        android:textColor="#F0F0F0"
-        android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/ind1"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:layout_width="166dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/ic_white_btn"
+        android:fontFamily="@font/lato"
+        android:text="Let's start"
+        android:textAllCaps="false"
+        android:textColor="#545272"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ind4"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -89,7 +134,7 @@
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="2dp"
         app:layout_constraintBottom_toBottomOf="@+id/ind1"
         app:layout_constraintEnd_toStartOf="@+id/ind3"
         app:layout_constraintHorizontal_bias="0.5"
@@ -102,7 +147,7 @@
         android:id="@+id/ind3"
         android:layout_width="16dp"
         android:layout_height="16dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="2dp"
         android:layout_marginEnd="4dp"
         app:layout_constraintBottom_toBottomOf="@+id/ind2"
         app:layout_constraintEnd_toStartOf="@+id/ind4"
@@ -124,7 +169,8 @@
         app:srcCompat="@drawable/seleted" />
 
     <ImageView
-        android:id="@+id/back"
+        android:id="@+id/btnBack"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -134,14 +180,6 @@
         app:layout_constraintVertical_bias="0.499"
         app:srcCompat="@drawable/ic_back" />
 
-    <ImageView
-        android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_next" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

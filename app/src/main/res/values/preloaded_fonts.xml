@@ -3,5 +3,9 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/aclonica</item>
         <item>@font/alice</item>
+        <item>@font/lato</item>
+        <item>@font/lato_bold</item>
+        <item>@font/lato_thin</item>
+        <item>@font/philosopher</item>
     </array>
 </resources>
