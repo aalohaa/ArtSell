@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.HomeActivity"
-    android:background="@color/white">
+    android:background="#F0F0F0">
 
     <TextView
         android:id="@+id/textView2"
@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
-        android:text="Welcome To Grocery Store App"
-        android:textColor="@color/purple_700"
+        android:text="Welcome To Artsell"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,8 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
-        android:text="Explore Us"
-        android:textColor="@color/purple_700"
+        android:text="Join Us"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,9 +34,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:src="@mipmap/grocery"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/artselllogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,14 +56,15 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <LinearLayout
+            android:layout_marginTop="60dp"
             android:onClick="login"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/key" />
 
             <TextView
@@ -70,22 +73,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="6dp"
-                android:text="Login"
-                android:textSize="22sp"
+                android:text="Log In"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
 
         <LinearLayout
             android:onClick="registration"
-            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="60dp">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/registration" />
 
             <TextView
@@ -94,8 +98,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="6dp"
-                android:text="Registration"
-                android:textSize="22sp"
+                android:text="Register"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -106,16 +110,17 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alice"
-        android:text="We Are Happy To Have You!Get Ready To Buy Fresh and Freeze, Grocery, and Anything You Want."
+        android:text="LESSSGOOO"
         android:textAlignment="center"
-        android:textColor="#076308"
+        android:textColor="#000000"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias=".3" />
+        app:layout_constraintVertical_bias="0.448" />
 
     <ProgressBar
         android:id="@+id/progressbar"
@@ -126,9 +131,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
